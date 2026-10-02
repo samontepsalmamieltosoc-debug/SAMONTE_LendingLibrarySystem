@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.Master.cs" Inherits="SAMONTE_LendingLibrarySystem.UserMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Borrower Portal - Lending Library System</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; }
+        .navbar { background-color: #0f766e; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .navbar h2 { margin: 0; font-size: 20px; }
+        .nav-links { display: flex; gap: 15px; align-items: center; }
+        .nav-links a { color: #ccfbf1; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; }
+        .nav-links a:hover { background-color: #115e59; color: #ffffff; }
+        .logout-btn { background-color: #ef4444; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; }
+        .container { padding: 30px; max-width: 1100px; margin: 0 auto; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 10px 12px; border: 1px solid #e2e8f0; text-align: left; }
+        th { background-color: #f1f5f9; font-weight: 600; }
+        .btn { padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; color: white; background-color: #0d9488; }
+        .btn-reserve { background-color: #0284c7; }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <h2>Lending Library — Borrower Portal</h2>
+            <div class="nav-links">
+                <a href="<%= ResolveUrl("~/User/BrowseTools.aspx") %>">Browse Catalog</a>
+                <a href="<%= ResolveUrl("~/User/MyHistory.aspx") %>">My Borrow History</a>
+                <a href="<%= ResolveUrl("~/User/MyFines.aspx") %>">My Fines</a>
+                <a href="<%= ResolveUrl("~/User/ReturnItem.aspx") %>">Return Tool</a>
+                <a href="<%= ResolveUrl("~/User/Profile.aspx") %>">My Profile</a>
+                <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="logout-btn" OnClick="btnLogout_Click" CausesValidation="false" />
+            </div>
+        </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
