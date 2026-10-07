@@ -104,7 +104,7 @@
                         <div class="meter"><i></i></div>
 
                         <div class="card-footer">
-                            <a href='<%# "BrowseTools.aspx?ToolID=" + Eval("ToolID") %>'
+                            <a href='<%# "RequestReservation.aspx?ToolID=" + Eval("ToolID") %>'
                                class='<%# Convert.ToInt32(Eval("AvailableQty")) > 0 && Eval("ConditionStatus").ToString() == "Good" ? "btn-reserve" : "btn-reserve btn-disabled" %>'>
                                 <%# Convert.ToInt32(Eval("AvailableQty")) > 0 && Eval("ConditionStatus").ToString() == "Good" ? "Reserve Item" : "Unavailable" %>
                             </a>

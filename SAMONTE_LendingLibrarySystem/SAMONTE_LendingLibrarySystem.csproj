@@ -84,6 +84,7 @@
     <Content Include="User\MyFines.aspx" />
     <Content Include="User\MyHistory.aspx" />
     <Content Include="User\Profile.aspx" />
+    <Content Include="User\RequestReservation.aspx" />
     <Content Include="User\ReturnItem.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <Compile Include="Modules\LoanEngine.cs" />
     <Compile Include="Modules\QueueManager.cs" />
     <Compile Include="Modules\ReportingEngine.cs" />
+    <Compile Include="Modules\ReturnAssessment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
@@ -199,6 +201,13 @@
     <Compile Include="User\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\RequestReservation.aspx.cs">
+      <DependentUpon>RequestReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\RequestReservation.aspx.designer.cs">
+      <DependentUpon>RequestReservation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\ReturnItem.aspx.cs">
       <DependentUpon>ReturnItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,7 +228,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="docs\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
