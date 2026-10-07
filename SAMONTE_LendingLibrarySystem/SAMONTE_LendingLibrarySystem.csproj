@@ -73,6 +73,10 @@
     <Content Include="Admin\ManageRequests.aspx" />
     <Content Include="Admin\ManageUsers.aspx" />
     <Content Include="Admin\ReturnedItems.aspx" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\SAMONTE_LendingLibrarySystem.dll" />
+    <Content Include="bin\SAMONTE_LendingLibrarySystem.pdb" />
     <Content Include="Login.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Unauthorized.aspx" />
@@ -205,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.Master" />
+    <Content Include="bin\SAMONTE_LendingLibrarySystem.dll.config" />
     <None Include="packages.config" />
     <Content Include="User.Master" />
     <None Include="Web.Debug.config">
